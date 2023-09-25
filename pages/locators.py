@@ -1,6 +1,10 @@
 from selenium.webdriver.common.by import By
 
 
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -21,5 +25,5 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.TAG_NAME, "h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main>.price_color")
     ADDED_PRODUCT_NAME = (By.CSS_SELECTOR, ".alertinner>strong")
-                          #//strong[contains(text(),"The shellcoder's handbook")]
     BASKET_TOTAL_AFTER_ADDING_PRODUCT = (By.CSS_SELECTOR, ".alertinner>p>strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages>.alert-success:nth-child(1)")
